@@ -13,20 +13,52 @@ body {
 .header-content {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.header-content .logo {
+    position: absolute;
+    left: 0;
+}
+
+.header-content nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.header-content nav ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.footer-content {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.footer-content nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 header {
     background: #fff;
     padding: 20px 0;
     border-bottom: 1px solid #ddd;
-    display: flex;
-    align-items: center;
 }
 
 footer {
-    background: #002147; /* 남색 배경 */
-    color: white; /* 텍스트 색상 흰색으로 설정 */
+    background: #002147;
+    color: white;
     padding: 20px 0;
     display: flex;
     flex-direction: column;
@@ -41,11 +73,13 @@ footer {
 }
 
 .footer-info p {
-    margin: 5px 0; /* 각 정보 항목 간의 간격 조정 */
+    margin: 5px 0;
 }
 
 .logo {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .header-content .logo img {
@@ -59,6 +93,8 @@ footer {
 
 nav {
     flex: 2;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
@@ -85,16 +121,15 @@ nav ul li a:hover {
 }
 
 footer nav ul li a {
-    color: white; /* 푸터 메뉴 항목의 텍스트 색상을 흰색으로 설정 */
+    color: white;
 }
 
 footer nav ul li a:hover {
-    background-color: #444; /* 푸터 메뉴 항목에 호버 시 어두운 배경색 적용 */
+    background-color: #444;
 }
 
 .language-selector {
-    flex: 1;
-    text-align: right;
+    display: none;
 }
 
 .hero {
@@ -135,9 +170,10 @@ footer nav ul li a:hover {
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: center; /* 가운데 정렬 */
+    justify-content: center;
     align-items: center;
     height: 100%;
+    flex-wrap: wrap;
 }
 
 .product-item {
@@ -145,9 +181,9 @@ footer nav ul li a:hover {
     text-align: center;
     opacity: 0.7;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    flex: 1; /* 아이템이 가로로 균등하게 분배되도록 설정 */
-    max-width: 300px; /* 각 아이템의 최대 너비 설정 */
-    margin: 0 5px; /* 각 아이템 사이의 간격 설정 */
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 10px;
 }
 
 .product-item:hover {
@@ -189,12 +225,12 @@ footer nav ul li a:hover {
 }
 
 .learn-more a {
-    text-decoration: none; /* 밑줄 제거 */
-    color: white; /* 글씨 색상을 흰색으로 설정 */
+    text-decoration: none;
+    color: white;
 }
 
 .learn-more a:hover {
-    color: #ff6600; /* 호버 시 글씨 색상을 주황색으로 변경 */
+    color: #ff6600;
 }
 
 .module-content-mediatext {
@@ -206,6 +242,7 @@ footer nav ul li a:hover {
     align-items: center;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .area-media {
@@ -351,6 +388,7 @@ footer nav ul li a:hover {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .solutions .product {
@@ -399,15 +437,15 @@ footer nav ul li a:hover {
 }
 
 .product-info .arrow-icon {
-    display: block; /* 블록 요소로 표시 */
-    text-align: center; /* 가운데 정렬 */
+    display: block;
+    text-align: center;
 }
 
 .product-info i {
-    color: #ff6600; /* 주황색 */
-    font-size: 36px; /* 아이콘 크기 */
-    margin-top: 10px; /* 상단 여백 */
-    text-decoration: none; /* 밑줄 제거 */
+    color: #ff6600;
+    font-size: 36px;
+    margin-top: 10px;
+    text-decoration: none;
 }
 
 .product-title, .product-description, .product-info i {
@@ -419,12 +457,12 @@ footer nav ul li a:hover {
     right: 20px;
     bottom: 20px;
     display: flex;
-    flex-direction: column-reverse; /* 전화 아이콘이 맨 아래에 오도록 역순으로 배치 */
+    flex-direction: column-reverse;
     gap: 10px;
 }
 
 .floating-icon {
-    background-color: #00AEEF; /* 밝은 색상으로 변경 */
+    background-color: #00AEEF;
     color: white;
     padding: 10px;
     border-radius: 50%;
@@ -438,5 +476,192 @@ footer nav ul li a:hover {
 }
 
 .floating-icon:hover {
-    background-color: #007B9E; /* 호버 시 색상 */
+    background-color: #007B9E;
+}
+
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        border-bottom-right-radius: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        border-bottom-right-radius: 0;
+        height: auto; /* 배경 영역을 콘텐츠에 맞게 자동 조정 */
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .product-item {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .product-item img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 5px; /* 이미지와 텍스트 사이의 간격 줄이기 */
+    }
+
+    .product-info {
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 5px; /* 텍스트와 "더 알아보기" 링크 사이의 간격 줄이기 */
+    }
+
+    .learn-more {
+        position: relative;
+        bottom: 0; /* 간격 조정을 위해 값을 조정 */
+        left: 50%;
+        transform: translateX(-50%);
+        border: 2px solid #ff6600;
+        color: #ff6600;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+        background: transparent;
+        margin-top: 0; /* 간격을 추가로 조정 */
+    }
+
+    .learn-more a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .learn-more a:hover {
+        color: #ff6600;
+    }
+
+    .header-content, footer .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav ul li {
+        margin-bottom: 10px;
+    }
+
+    footer nav ul li a {
+        font-size: 14px;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        border-bottom-right-radius: 0;
+        height: 1500px; /* 배경 영역을 더 넓게 조정 */
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%; /* hero 섹션의 전체 높이를 차지하도록 설정 */
+        padding: 0 10px;
+    }
+
+    .product-item {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .product-item img {
+        width: 70%; /* 그림을 더 작게 조정 */
+        height: auto;
+        margin-bottom: 5px; /* 이미지와 텍스트 사이의 간격 줄이기 */
+    }
+
+    .product-info {
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 5px; /* 텍스트와 "더 알아보기" 링크 사이의 간격 줄이기 */
+    }
+
+    .learn-more {
+        position: relative;
+        bottom: 0; /* 간격 조정을 위해 값을 조정 */
+        left: 50%;
+        transform: translateX(-50%);
+        border: 2px solid #ff6600;
+        color: #ff6600;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 12px;
+        cursor: pointer;
+        background: transparent;
+        margin-top: 0; /* 간격을 추가로 조정 */
+    }
+
+    .learn-more a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .learn-more a:hover {
+        color: #ff6600;
+    }
+
+    .header-content, footer .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav ul li {
+        margin-bottom: 10px;
+    }
+
+    footer nav ul li a {
+        font-size: 12px;
+    }
 }

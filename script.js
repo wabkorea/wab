@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (entry.isIntersecting) {
                 const counter = entry.target;
                 countUp(counter);
-                observer.unobserve(counter); // 카운팅 완료 후 관찰 중지
+                observer.unobserve(counter);
             }
         });
     }, {
-        threshold: 1.0 // 요소가 100% 화면에 나타날 때 트리거
+        threshold: 1.0
     });
 
     counters.forEach(counter => {
@@ -46,5 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 behavior: 'smooth'
             });
         });
+    });
+
+    // 모바일 메뉴 토글
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenuIcon.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
     });
 });
