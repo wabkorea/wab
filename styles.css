@@ -311,15 +311,17 @@ footer nav ul li a:hover {
 
 .statistics .subline {
     font-size: 18px;
-    color: #0056b3;
-    margin-bottom: 10px;
+    color: #87CEEB; /* 연한 하늘색 */
+    margin-bottom: 0; /* 간격 딱 붙게 설정 */
 }
 
 .statistics .headline {
     font-size: 28px;
-    color: #004080;
-    margin-bottom: 30px;
+    color: #004080; /* 볼딩된 남색 */
+    font-weight: bold;
+    margin-top: 0; /* 간격 딱 붙게 설정 */
 }
+
 
 .statistics .stat-container {
     display: flex;
