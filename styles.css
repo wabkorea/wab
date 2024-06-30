@@ -35,7 +35,6 @@ body {
     width: 100%;
 }
 
-
 .footer-content {
     display: flex;
     align-items: center;
@@ -111,7 +110,8 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #002d70;
+    font-weight: bold;
     padding: 8px 12px;
 }
 
@@ -126,6 +126,16 @@ footer nav ul li a {
 
 footer nav ul li a:hover {
     background-color: #444;
+}
+
+footer nav ul li::after {
+    content: "|";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer nav ul li:last-child::after {
+    content: "";
 }
 
 .language-selector {
@@ -266,14 +276,22 @@ footer nav ul li a:hover {
 }
 
 .area-text .overline {
-    font-size: 18px;
-    color: #0056b3;
+    font-size: 30px;
+    color: #0377f3;
+    margin-bottom: 0px; /* 여백을 줄임 */
+}
+
+.container .overline {
+    font-size: 30px;
+    color: #0377f3;
+    margin-bottom: -20px; /* 간격 딱 붙게 설정 */
 }
 
 .area-text .headline {
     font-size: 28px;
     color: #0056b3;
-    margin: 10px 0;
+    margin-top: 0px; /* 여백을 줄임 */
+    margin-bottom: 10px;
 }
 
 .area-text p {
@@ -310,8 +328,8 @@ footer nav ul li a:hover {
 }
 
 .statistics .subline {
-    font-size: 18px;
-    color: #87CEEB; /* 연한 하늘색 */
+    font-size: 25px;
+    color: #3791b4; /* 연한 하늘색 */
     margin-bottom: 0; /* 간격 딱 붙게 설정 */
 }
 
@@ -321,7 +339,6 @@ footer nav ul li a:hover {
     font-weight: bold;
     margin-top: 0; /* 간격 딱 붙게 설정 */
 }
-
 
 .statistics .stat-container {
     display: flex;
