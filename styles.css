@@ -34,6 +34,16 @@ footer {
     text-align: center;
 }
 
+.footer-info {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-info p {
+    margin: 5px 0; /* 각 정보 항목 간의 간격 조정 */
+}
+
 .logo {
     flex: 1;
 }
@@ -125,7 +135,7 @@ footer nav ul li a:hover {
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* 가운데 정렬 */
     align-items: center;
     height: 100%;
 }
@@ -135,6 +145,9 @@ footer nav ul li a:hover {
     text-align: center;
     opacity: 0.7;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    flex: 1; /* 아이템이 가로로 균등하게 분배되도록 설정 */
+    max-width: 300px; /* 각 아이템의 최대 너비 설정 */
+    margin: 0 5px; /* 각 아이템 사이의 간격 설정 */
 }
 
 .product-item:hover {
@@ -143,8 +156,7 @@ footer nav ul li a:hover {
 }
 
 .product-item .product-image {
-    max-width: 300px;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -174,6 +186,15 @@ footer nav ul li a:hover {
 
 .product-item:hover .learn-more {
     display: block;
+}
+
+.learn-more a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: white; /* 글씨 색상을 흰색으로 설정 */
+}
+
+.learn-more a:hover {
+    color: #ff6600; /* 호버 시 글씨 색상을 주황색으로 변경 */
 }
 
 .module-content-mediatext {
@@ -329,6 +350,7 @@ footer nav ul li a:hover {
 .solutions .product-highlight {
     display: flex;
     justify-content: center;
+    gap: 10px;
 }
 
 .solutions .product {
@@ -337,7 +359,6 @@ footer nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 20px;
     flex: 1;
     max-width: 300px;
 }
@@ -377,7 +398,6 @@ footer nav ul li a:hover {
     color: #fff;
 }
 
-/* 화살표 아이콘 스타일 수정 */
 .product-info .arrow-icon {
     display: block; /* 블록 요소로 표시 */
     text-align: center; /* 가운데 정렬 */
@@ -390,8 +410,33 @@ footer nav ul li a:hover {
     text-decoration: none; /* 밑줄 제거 */
 }
 
-/* 텍스트와 아이콘의 그림자 효과 제거 */
 .product-title, .product-description, .product-info i {
     text-shadow: none;
 }
 
+.floating-icons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column-reverse; /* 전화 아이콘이 맨 아래에 오도록 역순으로 배치 */
+    gap: 10px;
+}
+
+.floating-icon {
+    background-color: #00AEEF; /* 밝은 색상으로 변경 */
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.floating-icon:hover {
+    background-color: #007B9E; /* 호버 시 색상 */
+}

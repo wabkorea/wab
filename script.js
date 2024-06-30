@@ -36,4 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
     counters.forEach(counter => {
         observer.observe(counter);
     });
+
+    // 부드러운 스크롤링 효과 추가
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 });
