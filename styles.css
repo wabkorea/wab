@@ -1,0 +1,397 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    background: #002147; /* 남색 배경 */
+    color: white; /* 텍스트 색상 흰색으로 설정 */
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    flex: 1;
+}
+
+.header-content .logo img {
+    max-height: 50px;
+}
+
+.footer-logo img {
+    max-height: 50px;
+    display: block;
+}
+
+nav {
+    flex: 2;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+footer nav ul li a {
+    color: white; /* 푸터 메뉴 항목의 텍스트 색상을 흰색으로 설정 */
+}
+
+footer nav ul li a:hover {
+    background-color: #444; /* 푸터 메뉴 항목에 호버 시 어두운 배경색 적용 */
+}
+
+.language-selector {
+    flex: 1;
+    text-align: right;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    border-bottom-right-radius: 435px;
+}
+
+.background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 51, 0.5);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.product-item {
+    position: relative;
+    text-align: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-item:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.product-item .product-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.learn-more {
+    display: none;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #ff6600;
+    color: #ff6600;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.product-item:hover .learn-more {
+    display: block;
+}
+
+.module-content-mediatext {
+    padding: 50px 0;
+}
+
+.layout-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.area-media {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-media img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.area-text {
+    flex: 0 1 auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.area-text .overline {
+    font-size: 18px;
+    color: #0056b3;
+}
+
+.area-text .headline {
+    font-size: 28px;
+    color: #0056b3;
+    margin: 10px 0;
+}
+
+.area-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.ui-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ff6600;
+    color: #ff6600;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ui-button:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+.statistics {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.statistics .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.statistics .subline {
+    font-size: 18px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.statistics .headline {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 30px;
+}
+
+.statistics .stat-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.statistics .stat {
+    flex: 1 1 20%;
+    text-align: center;
+    min-width: 150px;
+}
+
+.statistics .stat h3 {
+    font-size: 48px;
+    color: #004080;
+    margin: 0;
+}
+
+.statistics .stat p {
+    font-size: 18px;
+    color: #333;
+}
+
+.statistics .ui-button {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.ui-button a {
+    text-decoration: none;
+}
+
+.count {
+    font-size: 48px;
+    color: #004080;
+    margin: 0;
+}
+
+.solutions {
+    padding: 50px 0;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.solutions .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.solutions .subline {
+    font-size: 18px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.solutions .headline {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 30px;
+}
+
+.solutions .product-highlight {
+    display: flex;
+    justify-content: center;
+}
+
+.solutions .product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.solutions .product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.solutions .product-info {
+    text-align: center;
+}
+
+.solutions .product-title {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #004080;
+}
+
+.solutions .product-description {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.solutions .learn-more a {
+    text-decoration: none;
+    color: #ff6600;
+    border: 2px solid #ff6600;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.solutions .learn-more a:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+/* 화살표 아이콘 스타일 수정 */
+.product-info .arrow-icon {
+    display: block; /* 블록 요소로 표시 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+.product-info i {
+    color: #ff6600; /* 주황색 */
+    font-size: 36px; /* 아이콘 크기 */
+    margin-top: 10px; /* 상단 여백 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+/* 텍스트와 아이콘의 그림자 효과 제거 */
+.product-title, .product-description, .product-info i {
+    text-shadow: none;
+}
+
