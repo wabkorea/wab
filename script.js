@@ -51,7 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // 모바일 메뉴 토글
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
     const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    
     mobileMenuIcon.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
+        mobileMenu.classList.add('active');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
     });
 });
